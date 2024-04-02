@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &151829580231964012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6633270136737030687}
+  m_Layer: 0
+  m_Name: ObjectGrabPointTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6633270136737030687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151829580231964012}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000022351744, y: -0, z: -0.000000005587936, w: 1}
+  m_LocalPosition: {x: 0, y: 0.4360001, z: 1.539}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4177095342118572231}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070626820862860516
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +140,7 @@ GameObject:
   - component: {fileID: 8547409131071491331}
   - component: {fileID: 320348665011042233}
   - component: {fileID: 6566670296401980389}
+  - component: {fileID: 8667208513432240687}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -130,6 +162,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6606790176037300537}
+  - {fileID: 6633270136737030687}
+  - {fileID: 8590493616060806481}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2751563748435851576
@@ -257,6 +291,26 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8667208513432240687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2505117895306530557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61be773d98ec80419ce714b213d38c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraPosition: {fileID: 8590493616060806481}
+  pickUpLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  objectGrabPointTransform: {fileID: 0}
+  isGrabbing: 0
+  pickUpDistance: 4
+  indicator: {fileID: 0}
 --- !u!1 &5625264881415232607
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,13 +336,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5625264881415232607}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.108699515, y: -0.1263928, z: 0.013935592, w: 0.9859082}
-  m_LocalPosition: {x: 0, y: 22.870998, z: 0}
-  m_LocalScale: {x: 1, y: 14.604723, z: 1}
+  m_LocalRotation: {x: 0.10869952, y: -0.1263928, z: 0.013935593, w: 0.9859082}
+  m_LocalPosition: {x: 0, y: 0.4360001, z: 0}
+  m_LocalScale: {x: 1, y: 1.6457101, z: 0.95578754}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4165740311251814248}
-  m_Father: {fileID: 3871506709584309711}
+  m_Father: {fileID: 4177095342118572231}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2877008740475932274
 MonoBehaviour:
@@ -463,7 +517,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8590493616060806481}
+  m_Children: []
   m_Father: {fileID: 6606790176037300537}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
